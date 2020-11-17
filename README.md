@@ -42,12 +42,12 @@ new Vue({
 
 Include in template:
 ```html
-<vue-csv-import url="/url/to/post" :map-fields="['array', 'of', 'field', 'names']"></vue-csv-import>
+<vue-csv-import v-model="parseCsv" :map-fields="['array', 'of', 'field', 'names']"></vue-csv-import>
 
 ```
 or with labels:
 ```html
-<vue-csv-import url="/url/to/post" :map-fields="{field1: 'Label 1', field2: 'Label 2'}"></vue-csv-import>
+<vue-csv-import v-model="parseCsv" :map-fields="{field1: 'Label 1', field2: 'Label 2'}"></vue-csv-import>
 
 ```
 or with v-model:
@@ -83,10 +83,6 @@ With all available slots:
     <template slot="next" slot-scope="{load}">
         <button @click.prevent="load">load!</button>
     </template>
-
-    <template slot="submit" slot-scope="{submit}">
-        <button @click.prevent="submit">send!</button>
-    </template>
 </vue-csv-import>
 
 ```
@@ -95,7 +91,6 @@ Options:
 | Option | Default | Description |
 | ------ | ------- | ----------- |
 | mapFields | N/A | (required) These are the field names that the CSV will be mapped to |
-| url | null | If present, the component will post the mapped values to this url.  Otherwise, the component will only emit the value to be used as a normal input |
 | autoMatchFields | false | If field names match csv headers, automatically match them. Leading and trailing white space is trimmed before comparison. |
 | autoMatchIgnoreCase | false | Ignore case when automatically matching fields (autoMatchFields required) |
 | callback  | null | The callback to be called on successful upload. (url required) |
@@ -106,11 +101,10 @@ Options:
 | buttonClass | "btn btn-default" | The class to be added to buttons |
 | inputClass | "form-control-file" | The class to be added to the file input |
 | tableSelectClass | "form-control" | The class to be added to the table element selects |
-| submitBtnText | "Submit" | The value of the final submit button |
 | loadBtnText | "Submit" | The value of the initial load file button |
 | headers | null | Define whether csv has headers by default.  Removes checkbox. |
 | fileMimeTypes | ["text/csv"] | Array of valid mime types
-| canIgnore | false | Can fields be ignored (Boolean)
+| canIgnore | false | Can fields be ignored (Boolean) 
 
 Slots:
 
@@ -118,7 +112,6 @@ Slots:
 | ------ | ----------- |
 | thead | The content of "thead" in the field mapping table |
 | next | The next button.  Use slot-scope "next" to load csv. |
-| submit | The submit button. Use slot-scope "submit" to submit form. |
 | hasHeaders | The "has headers" checkbox. Use slot-scope "toggle" and "headers". |
 
 ### Testing
