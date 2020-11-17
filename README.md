@@ -126,7 +126,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ### Security
 
-If you discover any security related issues, please contact John Gile.
+If you discover any security related issues, please contact Ismael Lopez.
 
 ## License
 
@@ -135,4 +135,5 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 ## Credits
 
 - [John Gile](https://github.com/jgile)
+- [Ismael Lopez](https://github.com/lopei13)
 - [All Contributors](../../contributors)

@@ -1,20 +1,20 @@
 {
-  "name": "vue-csv-import",
+  "name": "vue-csv-parse",
   "version": "3.3.3",
   "private": false,
   "description": "Vue.js component to handle CSV uploads with field mapping.",
-  "author": "John Gile",
+  "author": "Ismael Lopez",
   "scripts": {
     "serve": "vue-cli-service serve ./demo/main",
-    "build": "vue-cli-service build --target lib --name VueCsvImport src/index.js",
+    "build": "vue-cli-service build --target lib --name VueCsvParse src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:demo": "vue-cli-service --mode development build --dest ./dist/demo ./demo/main"
   },
-  "main": "dist/VueCsvImport.umd.js",
-  "browser": "dist/VueCsvImport.common.js",
-  "jsDelivr": "dist/VueCsvImport.umd.min.js",
-  "unpkg": "dist/VueCsvImport.umd.min.js",
+  "main": "dist/VueCsvPare.umd.js",
+  "browser": "dist/VueCsvParse.common.js",
+  "jsDelivr": "dist/VueCsvParse.umd.min.js",
+  "unpkg": "dist/VueCsvParse.umd.min.js",
   "dependencies": {
     "axios": "^0.19.0",
     "core-js": "^3.6.4",
@@ -42,16 +42,16 @@
     "vue": "^2.5.22"
   },
   "bugs": {
-    "url": "https://github.com/jgile/vue-csv-import/issues"
+    "url": "https://github.com/lopei13/vue-csv-import/issues"
   },
   "keywords": [
-    "jgile",
+    "lopei13",
     "csv",
     "map"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jgile/vue-csv-import.git"
+    "url": "https://github.com/lopei13/vue-csv-import.git"
   }
 }

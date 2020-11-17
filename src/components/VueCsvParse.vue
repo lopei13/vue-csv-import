@@ -3,7 +3,7 @@
     <div class="form">
       <div class="vue-csv-uploader-part-one">
         <div
-          class="form-check form-group csv-import-checkbox"
+          class="form-check form-group csv-parse-checkbox"
           v-if="headers === null"
         >
           <slot
@@ -23,7 +23,7 @@
             </label>
           </slot>
         </div>
-        <div class="form-group csv-import-file">
+        <div class="form-group csv-parse-file">
           <input
             ref="csv"
             type="file"
